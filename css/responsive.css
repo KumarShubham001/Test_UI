@@ -1,0 +1,170 @@
+/* For Tablets */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
+}
+
+/* For Mobile phones */
+@media only screen and (max-width: 479px) {
+	.card {
+		height: 500px;
+		background: white;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		border-radius: 0px;
+	}
+	fieldset {
+		width: calc(100% - 30px) !important;
+		padding: 0 15px 0 15px !important;
+	}
+	fieldset p {
+		margin: 30px 0 30px 0;
+		font-size: 12px;
+	}
+	#msform {
+    background: white;
+}
+ul, li{
+    margin-top: 15px;
+    list-style-type: none !important;
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    margin-top: 15px;
+    text-align: center;
+}
+fieldset {
+    box-sizing: border-box;
+    position: absolute;
+    background: white;
+}
+fieldset:not(:first-of-type) {
+    display: none;
+}
+.center {
+    text-align: center;
+}
+fieldset h1 {
+    font-size: 26px;
+    font-style: normal;
+    margin-bottom: 30px;
+}
+fieldset label {
+    font-size: 16px;
+    margin-left: 26px;
+}
+.half-day, .full-day {
+    background: lightgrey;
+    border: 1px solid grey;
+    height: 30px;
+    width: 80px;
+}
+.half-day.active, .full-day.active {
+    background: #01bfa5;
+    color: white;
+}
+fieldset input[type="text"], fieldset input[type="date"] {
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid black; 
+    font-size: 14px;
+    padding-left: 10px; 
+    padding-top: 10px;
+    margin-left: 10%;
+}
+fieldset input:focus {
+    outline: none;
+}
+fieldset input[type="button"].next,fieldset input[type="submit"] {
+    width: 100px;
+    background: #01bfa5;
+    border: 1px solid lightgrey;
+    color: white;
+    border-radius: 3px;
+    height: 40px;
+    float: right;
+    margin-right: 15px;
+}
+fieldset input[type="button"].previous {
+    width: 100px;
+    background: darkgrey;
+    color: white;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    height: 40px;
+    float: left;
+    margin-left: 15px;
+}
+fieldset:nth-child(4) label {
+    margin-top: 0;
+    line-height: 28px;
+}
+fieldset:nth-child(4) input[type="text"] {
+    margin-top: -10px;
+    margin-bottom: 10px !important;
+}
+ 
+fieldset input[type="button"].previous, fieldset input[type="button"].next, fieldset input[type="submit"] {
+    float: bottom !important;
+    bottom: 15px !important;
+    top: 375px !important;
+    position: absolute;
+}
+fieldset input[type="button"].previous {
+    float: left;
+    left: 15px;
+}
+fieldset input[type="button"].next, fieldset input[type="submit"] {
+    float:right;
+    right: 15px;
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+}
+#progressbar li {
+    list-style-type: none;
+    color: lightgrey;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.25px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    background: white;
+}
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: lightgrey;
+    background: lightgrey;
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+}
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: lightgrey;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: 1;
+}
+#progressbar li:first-child:after {
+    content: none;
+}
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #01bfa5;
+    color: #01bfa5;
+}
+#progressbar li.active:before, #progressbar li.active:after, #progressbar li.active {
+    color: #01bfa5;
+}
+}
