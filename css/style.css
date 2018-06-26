@@ -6,9 +6,14 @@
     font-family: universal;
     src: url(../fonts/Poppins-Regular.ttf);
 }
+@font-face {
+    font-family: universal-thin;
+    src: url(../fonts/Poppins-Thin.ttf);
+}
 
 *{
     font-family: universal;
+    font-weight: bold;
 }
 
 .no-js #loader { display: none;  }
@@ -30,198 +35,232 @@ body {
     background: #ececec;
 }
 
-.navbar {
-    border-radius: 0px;
-    background: #01bfa5;
-    border-color: #01bfa5;
-    padding-top: 15px;
-    font-size: 38px;
-    height: 80px; 
+a, a:active, a:visited {
+    color: #99ccff;
+    text-decoration: none;
 }
-.navbar-toggle {
-    background: transparent !important;
-    border: 1px solid transparent !important;
-}
-.icon-bar {
-    background: black !important;
-}
-.navbar-brand {
-    font-family: cursive-new;
-    font-size: 32px;
-    color: white !important;
-    font-weight: bolder;
-
-    letter-spacing: 1px;
-    word-spacing: 5px;
-}
-.card {
-    background: white;
-    min-height: 515px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* from here main style start */
-
-#msform {
-    background: white;
-}
-ul, li{
-    margin-top: 15px;
-    list-style-type: none !important;
-    margin: 0px;
-    padding: 0px;
-}
-li {
-    margin-top: 15px;
-    text-align: center;
-}
-fieldset {
-    box-sizing: border-box;
-    position: absolute;
-    background: white;
-}
-fieldset:not(:first-of-type) {
-    display: none;
-}
-.center {
-    text-align: center;
-}
-fieldset h1 {
-    font-size: 26px;
-    font-style: normal;
-    margin-bottom: 30px;
-}
-fieldset label {
-    font-size: 16px;
-    margin-left: 26px;
-}
-.half-day, .full-day {
-    background: lightgrey;
-    border: 1px solid grey;
-    height: 30px;
-    width: 80px;
-}
-.half-day.active, .full-day.active {
-    background: #01bfa5;
-    color: white;
-}
-fieldset input[type="text"], fieldset input[type="date"] {
-    width: 80%;
-    height: 50px;
-    border: none;
-    border-bottom: 2px solid black; 
-    font-size: 14px;
-    padding-left: 10px; 
-    padding-top: 10px;
-    margin-left: 10%;
-}
-fieldset input:focus {
-    outline: none;
-}
-fieldset input[type="button"].next,fieldset input[type="submit"] {
-    width: 100px;
-    background: #01bfa5;
-    border: 1px solid lightgrey;
-    color: white;
-    border-radius: 3px;
-    height: 40px;
-    float: right;
-    margin-right: 15px;
-}
-fieldset input[type="button"].previous {
-    width: 100px;
-    background: darkgrey;
-    color: white;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-    height: 40px;
-    float: left;
-    margin-left: 15px;
-}
-fieldset:nth-child(4) label {
-    margin-top: 0;
-    line-height: 28px;
-}
-fieldset:nth-child(4) input[type="text"] {
-    margin-top: -10px;
-    margin-bottom: 10px !important;
-}
- 
-fieldset input[type="button"].previous, fieldset input[type="button"].next, fieldset input[type="submit"] {
-    float: bottom !important;
-    bottom: 15px !important;
-    top: 375px !important;
-    position: absolute;
-}
-fieldset input[type="button"].previous {
-    float: left;
-    left: 15px;
-}
-fieldset input[type="button"].next, fieldset input[type="submit"] {
-    float:right;
-    right: 15px;
-}
-
-#progressbar {
-    margin-bottom: 30px;
-    overflow: hidden;
-    counter-reset: step;
-}
-#progressbar li {
-    list-style-type: none;
-    color: lightgrey;
-    text-transform: uppercase;
-    font-size: 10.5px;
-    letter-spacing: 0.25px;
-    width: 33.33%;
-    float: left;
-    position: relative;
-    background: white;
-}
-#progressbar li:before {
-    content: counter(step);
-    counter-increment: step;
-    width: 20px;
-    line-height: 20px;
-    display: block;
-    font-size: 10px;
-    color: lightgrey;
-    background: lightgrey;
-    border-radius: 50%;
-    margin: 0 auto 5px auto;
-}
-#progressbar li:after {
-    content: '';
-    width: 100%;
-    height: 5px;
-    background: lightgrey;
-    position: absolute;
-    left: -50%;
-    top: 9px;
-    z-index: 1;
-}
-#progressbar li:first-child:after {
-    content: none;
-}
-#progressbar li.active:before, #progressbar li.active:after {
-    background: #01bfa5;
-    color: #01bfa5;
-}
-#progressbar li.active:before, #progressbar li.active:after, #progressbar li.active {
-    color: #01bfa5;
+a:hover {
+    color: #4da6ff;
+    text-decoration: none;
 }
 
 
+/* make sure it is only for desttop view */
+@media only screen and (min-width: 959px) {
+    .navbar {
+        border-radius: 0px;
+        background: #99ccff;
+        border-color: #99ccff;
+        padding-top: 5px;
+        font-size: 38px;
+        height: 70px; 
+    }
+    .navbar-toggle {
+        background: transparent !important;
+        border: 1px solid transparent !important;
+    }
+    .icon-bar {
+        background: black !important;
+    }
+    .navbar-brand {
+        font-family: cursive-new;
+        font-size: 32px;
+        color: white !important;
+        font-weight: bolder;
+
+        letter-spacing: 1px;
+        word-spacing: 5px;
+    }
+    .card {
+        background: white;
+        min-height: 515px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        width: 40%;
+        margin-left: 30%;
+        height: auto;
+    }
+
+    /* from here main style start */
+    #msform {
+        background: white;
+    }
+    ul, li{
+        margin-top: 15px;
+        list-style-type: none !important;
+        margin: 0px;
+        padding: 0px;
+    }
+    li {
+        margin-top: 15px;
+        text-align: center;
+    }
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        counter-reset: step;
+    }
+    #progressbar li {
+        list-style-type: none;
+        color: lightgrey;
+        text-transform: capitalize;
+        font-size: 9px;
+        letter-spacing: 0.25px;
+        width: 25%;
+        float: left;
+        position: relative;
+        background: white;
+    }
+    #progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 15px;
+        line-height: 15px;
+        display: block;
+        font-size: 10px;
+        color: lightgrey;
+        background: lightgrey;
+        border-radius: 50%;
+        margin: 0 auto 5px auto;
+    }
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: lightgrey;
+        position: absolute;
+        left: -50%;
+        top: 7px;
+        z-index: 1;
+    }
+    #progressbar li:first-child:after {
+        content: none;
+    }
+    #progressbar li.active:before, #progressbar li.active:after {
+        background: #99ccff;
+        color: #99ccff;
+    }
+    #progressbar li.active:before, #progressbar li.active:after, #progressbar li.active {
+        color: #99ccff;
+        font-family: universal;
+        font-size: 0.85em;
+    }
 
 
 
-
-
-
-
-
-
-
-
-
-
+    fieldset {
+        box-sizing: border-box;
+        position: absolute;
+        width: calc(40% - 15px); 
+        background: transparent;
+    }
+    fieldset:not(:first-of-type) {
+        display: none;
+    }
+    .center {
+        text-align: center;
+    }
+    fieldset h1 {
+        font-size: 36px;
+        font-style: normal;
+        margin-bottom: 30px;
+    }
+    fieldset label {
+        font-size: 16px;
+        margin-left: 26px;
+    }
+    fieldset p {
+        letter-spacing: 0.5px;
+        font-family: universal-thin;
+        font-weight: bolder;
+        margin-top: 45px;
+    }
+    fieldset label{
+        margin-left: 10%;
+    }
+    .half-day, .full-day {
+        background: lightgrey;
+        border: none;
+        height: 30px;
+        width: 80px;
+        margin-left: 5px;
+        border-radius: 5px;
+        border: none !important;
+        font-weight: normal;
+    }
+    .half-day.active, .full-day.active {
+        background: #99ccff;
+        color: white;
+    }
+    fieldset input[type="text"], fieldset input[type="number"], select, fieldset input[type="date"] {
+        width: 80%;
+        height: 50px;
+        border: none;
+        border-bottom: 1.5px solid lightgrey; 
+        font-size: 14px;
+        padding-left: 10px; 
+        padding-top: 10px;
+        margin-left: 10%;
+        border-radius: 5px;
+        font-family: universal-thin;
+        font-weight: bolder;
+    }
+    fieldset input:focus, select:focus {
+        outline: none;
+        border-bottom: 1.5px solid #99ccff;
+    }
+    fieldset input[type="button"].next,fieldset input[type="submit"] {
+        width: 100px;
+        background: #99ccff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        height: 40px;
+        float: right;
+        margin-right: 15px;
+        -webkit-transition: background 0.25s;
+        transition: background 0.25s;
+        letter-spacing: 0.5px;
+    }
+    fieldset input[type="button"].next:hover, fieldset input[type="submit"]:hover {
+        background: #4da6ff;
+    }
+    fieldset input[type="button"].previous {
+        width: 100px;
+        background: #666;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        height: 40px;
+        float: left;
+        margin-left: 15px;
+        -webkit-transition: background 0.25s;
+        transition: background 0.25s;
+        letter-spacing: 0.5px;
+    }
+    fieldset input[type="button"].previous:hover {
+        background: #333;
+    }
+    fieldset:nth-child(4) label {
+        margin-top: 0;
+        line-height: 28px;
+    }
+    fieldset:nth-child(4) input[type="text"] {
+        margin-top: -10px;
+        margin-bottom: 10px !important;
+    }
+     
+    fieldset input[type="button"].previous, fieldset input[type="button"].next, fieldset input[type="submit"] {
+        float: bottom !important;
+        bottom: 15px !important;
+        top: 375px !important;
+        position: absolute;
+    }
+    fieldset input[type="button"].previous {
+        float: left;
+        left: 15px;
+    }
+    fieldset input[type="button"].next, fieldset input[type="submit"] {
+        float:right;
+        right: 15px;
+    }
+}

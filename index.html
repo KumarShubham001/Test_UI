@@ -33,7 +33,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">Design Avenue</a>
+					<a class="navbar-brand" href="index.html"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -56,46 +56,54 @@
 			<div class="col-xs-12">
 				<div class="card">
 					
-						<form action method="post" id="msform">
-							<ul id="progressbar">
-								<li class="active">Details</li>
-								<li>Duration</li>
-								<li>Services</li>
-							</ul>
+					<form action method="post" id="msform">
+						<ul id="progressbar">
+							<li class="active">Details</li>
+							<li>Duration</li>
+							<li>Services</li>
+							<li>Pricing</li>
+						</ul>
 
-							<fieldset>
-								<h1 class="center">Details of the Event</h1>
+						<fieldset>
+							<h1 class="center">Details of the Event</h1>
 
-								<input type="text" name="event" placeholder="Search For Your Event">
-								<input type="text" name="location" placeholder="Start by typing your location">
-								<input type="date" name="date" placeholder="Select single or multiple dates">
-								<p class="center">*For urgent booking, <a href="#">Schedule a meeting now</a></p>
+							<input type="text" name="event" placeholder="Search For Your Event">
+							<input type="text" name="location" placeholder="Start by typing your location">
+							<input type="date" name="date" placeholder="Select single or multiple dates">
+							<p class="center">*For urgent booking, <a href="#">Schedule a meeting now</a></p>
 
-								<input type="button" name="next" value="Proceed" class="next center">
-							</fieldset>
+							<input type="button" name="next" value="Proceed" class="next center">
+						</fieldset>
 
-							<fieldset>
-								<h1 class="center">Pricing and Duration</h1>
+						<fieldset>
+							<h1 class="center">Pricing and Duration</h1>
 
-								<label>Duration</label>&nbsp; &nbsp;<input type="button" onclick="toggleButton()" class="half-day" value="Half Day"><input type="button" onclick="toggleButton()" class="full-day active" value="Full Day">
-								<p class="center">*Half Day: upto 4 hours, Full Day: upto 8 hours</p>
-								<input type="button" name="previous" value="Go Back" class="previous left">
-								<input type="button" onclick="toggle()" name="next" value="Proceed" class="next right">
-							</fieldset>
+							<label>Duration</label>&nbsp; &nbsp;<input type="button" onclick="toggleButton()" class="half-day" value="Half Day"><input type="button" onclick="toggleButton()" class="full-day active" value="Full Day">
+							<p class="center">*Half Day: upto 4 hours, Full Day: upto 8 hours</p>
+							<input type="button" name="previous" value="Go Back" class="previous left">
+							<input type="button" name="next" value="Proceed" class="next right">
+						</fieldset>
 
-							<fieldset>
-								<h1 class="center">Services</h1>
-								
-								<label>Photographers</label>
-								<input type="text" name="quantity" placeholder="No. of photographers">
-								<input type="text" name="quality" placeholder="Quality">
-								<label>Videographers</label>
-								<input type="text" name="quantity" placeholder="No. of videographers">
-								<input type="text" name="quality" placeholder="Quality">
-								<input type="button" name="previous" value="Go Back" class="previous left">
-								<input type="submit" name="submit" value="Book Now" class="right">
-							</fieldset>
-						</form>
+						<fieldset>
+							<h1 class="center">Services</h1>
+							
+							<label>Photographers</label>
+							<input type="number" name="quantity" placeholder="No. of photographers">
+							<input type="text" placeholder="Quality" name="quality">
+							<label>Videographers</label>
+							<input type="number" name="quantity" placeholder="No. of videographers">
+							<input type="text" placeholder="Quality" name="quality">
+							<input type="button" name="previous" value="Go Back" class="previous left">
+							<input type="button" name="next" value="Proceed" class="next right">
+						</fieldset>
+						<fieldset>
+							<h1 class="center">Pricing & Booking</h1>
+							
+							
+							<input type="button" name="previous" value="Go Back" class="previous left">
+							<input type="submit" name="submit" value="Book Now" class="right">
+						</fieldset>
+					</form>
 				</div>
 			</div>
 		</div>
